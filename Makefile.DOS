@@ -1,0 +1,16 @@
+CXX = i586-pc-msdosdjgpp-g++
+LD = i586-pc-msdosdjgpp-ld
+
+CXXFLAGS = -g -Iinclude -c -Istb -fpermissive -c -O6 -Ofast  -funroll-loops -funroll-all-loops -fomit-frame-pointer -fno-exceptions -ffast-math -mtune=i486 -march=i486 -IDOS-version -Iinclude
+
+OBJS = src/CGame.o DOSVersion/main.o DOSVersion/CDOSRenderer.o
+
+TARGET = game.exe
+
+$(TARGET):	$(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LIBS)
+
+all:   $(TARGET)
+
+clean:
+	rm -f $(OBJS) $(TARGET)
