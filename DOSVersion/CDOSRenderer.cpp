@@ -140,6 +140,10 @@ namespace odb {
                 //right
                 mOnKeyPressedCallback(ECommand::kRight);
                 break;
+            case 283:
+                textmode(C80);
+                std::cout << "Thank you for playing Capture Chaos 486 - (c) 2017 - Daniel Monteiro" << std::endl;
+                exit(0);
         }
     }
 
