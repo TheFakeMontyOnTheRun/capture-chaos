@@ -3,6 +3,8 @@ LD = i586-pc-msdosdjgpp-ld
 
 CXXFLAGS = -g -Iinclude -c -Istb -fpermissive -c -O6 -Ofast  -funroll-loops -funroll-all-loops -fomit-frame-pointer -fno-exceptions -ffast-math -mtune=i486 -march=i486 -IDOS-version -Iinclude
 
+LIBS = -lemu
+
 OBJS = src/CGame.o DOSVersion/main.o DOSVersion/CDOSRenderer.o
 
 TARGET = game.exe
