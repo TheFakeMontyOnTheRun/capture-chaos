@@ -193,7 +193,5 @@ namespace odb {
         }
 
         dosmemput(&buffer[0], 64000, 0xa0000);
-        gotoxy(1,1);
-        printf("frame: %d", game.frame);
     }
 }
