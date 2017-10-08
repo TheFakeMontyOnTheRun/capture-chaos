@@ -1,8 +1,10 @@
 # Capture chaos
 You move the red cursor and must capture all chaotic particles (the gray squares) before the time runs out (the red bar).
 
+- SDL:
 
-![ ](/screenshot_linux.png?raw=true)
+![ ](/screenshot-linux.png?raw=true)
 
+- MS-DOS:
 
-![ ](/screenshot_dos.png?raw=true)
+![ ](/screenshot-dos.png?raw=true)
