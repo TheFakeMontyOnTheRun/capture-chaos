@@ -44,6 +44,12 @@ namespace odb {
         if ( mParticles.empty() ) {
             gameState = EGameState::kVictory;
             return;
+        if ( std::abs(vx) > 0 ) {
+            vx = vx / 2;
+        }
+
+        if (std::abs(vy) > 0 ) {
+            vy = vy / 2;
         }
 
         x += vx;
@@ -101,24 +107,6 @@ namespace odb {
 
 
             switch (gameState) {
-                case EGameState::kGame:
-                    if (command == ECommand::kLeft) {
-                        vx = 0;
-                    }
-
-                    if (command == ECommand::kRight) {
-                        vx = 0;
-                    }
-
-                    if (command == ECommand::kUp) {
-                        vy = 0;
-                    }
-
-                    if (command == ECommand::kDown) {
-                        vy = 0;
-                    }
-                    return;
-
 
                 case EGameState::kGameOver:
                     gameState = EGameState::kTitleScreen;
@@ -129,8 +117,6 @@ namespace odb {
                     init();
                     return;
             }
-
-
         };
     }
 }

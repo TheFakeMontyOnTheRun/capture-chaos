@@ -42,21 +42,6 @@ namespace odb {
 #ifndef __EMSCRIPTEN__
                         exit(0);
 #endif
-                    case SDLK_LEFT:
-                        mOnKeyReleasedCallback( ECommand::kLeft );
-                        break;
-
-                    case SDLK_RIGHT:
-                        mOnKeyReleasedCallback( ECommand::kRight );
-                        break;
-
-                    case SDLK_UP:
-                        mOnKeyReleasedCallback( ECommand::kUp );
-                        break;
-
-                    case SDLK_DOWN:
-                        mOnKeyReleasedCallback( ECommand::kDown );
-                        break;
 		default:
 		  break;
 		}
