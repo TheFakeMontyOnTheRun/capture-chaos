@@ -161,11 +161,12 @@ namespace odb {
                 fill(480, game.timeEllapsed / (15000 / 480), 40, 480 - 40, {0, 128, 0, 0});
 
                 for ( const auto& particle : game.mParticles ) {
-                    fill( particle.mX, particle.mY, 40, 40, { 255, particle.mShade, particle.mShade, particle.mShade } );
+
+                    fill( particle.mX * 2, particle.mY * 2, 40, 40, { 255, particle.mShade, particle.mShade, particle.mShade } );
                 }
 
 
-                fill(game.x, game.y, 40, 40, {0, 255, 0, 0});
+                fill(game.x * 2, game.y * 2, 40, 40, {0, 255, 0, 0});
                 break;
 
             case CGame::EGameState::kVictory:
