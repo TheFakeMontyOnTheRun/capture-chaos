@@ -153,7 +153,7 @@ namespace odb {
 
         switch (game.gameState) {
             case CGame::EGameState::kTitleScreen:
-                fill(320, 240, 640, 480, {0, 0, 255, 0});
+                fill(0, 0, 640, 480, {0, 255, 0, 0});
                 break;
 
             case CGame::EGameState::kGame:
@@ -171,7 +171,7 @@ namespace odb {
                 break;
 
             case CGame::EGameState::kVictory:
-                fill(game.x, game.y, 640 - game.x, game.y, {0, 255, 255, 0});
+                fill(0, 0, 640, 480, {0, 255, 255, 0});
                 break;
 
             case CGame::EGameState::kGameOver:
