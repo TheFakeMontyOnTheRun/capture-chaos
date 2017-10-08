@@ -60,21 +60,6 @@ namespace odb {
             init();
         }
 
-        if (x > 440) {
-            x = 440;
-        }
-
-        if (y > 440) {
-            y = 440;
-        }
-
-        if (x < 40) {
-            x = 40;
-        }
-
-        if (y < 40) {
-            y = 40;
-        }
 
         std::vector<CParticle> toRemove;
 
