@@ -80,18 +80,18 @@ namespace odb {
     CControlCallback CGame::getKeyPressedCallback() {
         return [&](ECommand command) {
             if (command == ECommand::kLeft) {
-                vx = -10;
+                vx = -16;
             }
 
             if (command == ECommand::kRight) {
-                vx = 10;
+                vx = 16;
             }
             if (command == ECommand::kUp) {
-                vy = -10;
+                vy = -16;
             }
 
             if (command == ECommand::kDown) {
-                vy = 10;
+                vy = 16;
             }
         };
     }
