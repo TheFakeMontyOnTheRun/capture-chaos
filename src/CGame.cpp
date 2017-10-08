@@ -18,6 +18,7 @@ namespace odb {
         x = random( gen );
         y = random( gen );
 
+        mParticles.clear();
 
         for( int c = 0; c < 200; ++c ) {
             mParticles.emplace_back( random( gen ),
