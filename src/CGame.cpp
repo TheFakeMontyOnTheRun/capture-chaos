@@ -38,10 +38,6 @@ namespace odb {
     void CGame::tick(long ms) {
 
         if (gameState == EGameState::kVictory) {
-            if (x > 0 && y > 0) {
-                x--;
-                y--;
-            }
             return;
         }
 
