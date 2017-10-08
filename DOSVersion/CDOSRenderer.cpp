@@ -162,6 +162,10 @@ namespace odb {
 
                 for ( const auto& particle : game.mParticles ) {
 
+                    if ( !particle.mActive ) {
+                        continue;
+                    }
+
                     fill( particle.mX * 2, particle.mY * 2, 40, 40, { 255, particle.mShade, particle.mShade, particle.mShade } );
                 }
 

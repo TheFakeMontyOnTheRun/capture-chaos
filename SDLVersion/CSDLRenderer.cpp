@@ -103,6 +103,10 @@ namespace odb {
 
         for ( const auto& particle : game.mParticles ) {
 
+            if ( !particle.mActive ) {
+                continue;
+            }
+
             rect.x = particle.mX * 2;
 	        rect.y = particle.mY * 2;
             rect.w = 40;

@@ -41,9 +41,6 @@ namespace odb {
             return;
         }
 
-        if ( mParticles.empty() ) {
-            gameState = EGameState::kVictory;
-            return;
         if ( std::abs(vx) > 0 ) {
             vx = vx / 2;
         }
@@ -63,23 +60,22 @@ namespace odb {
         }
 
 
-        std::vector<CParticle> toRemove;
-
+        int active = 0;
         for ( auto& particle : mParticles ) {
-            particle.update();
 
-            if ( std::abs(particle.mX - x ) < 40 && std::abs(particle.mY - y ) < 40 ) {
+            if ( particle.mActive ) {
+                particle.update();
+                ++active;
+            }
 
-            } else {
-                toRemove.push_back(particle);
+            if ( std::abs(particle.mX - x ) < 20 && std::abs(particle.mY - y ) < 20 ) {
+                particle.mActive = false;
             }
         }
 
-        mParticles.clear();
-
-
-        for ( auto& particle : toRemove ) {
-            mParticles.push_back(particle);
+        if ( active == 0 ) {
+            gameState = EGameState::kVictory;
+            return;
         }
     }
 

@@ -14,6 +14,7 @@ namespace odb {
         int mVX = 0;
         int mVY = 0;
         int mShade = 0;
+        bool mActive = true;
 
         void update() {
             mX += mVX;
