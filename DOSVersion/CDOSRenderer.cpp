@@ -158,9 +158,7 @@ namespace odb {
 
             case CGame::EGameState::kGame:
 
-                fill(480, game.timeEllapsed / (60000 / 480), 40, 480 - 40, {0, 128, 0, 0});
-
-                int recth = 40;
+                fill(480, game.timeEllapsed / (15000 / 480), 40, 480 - 40, {0, 128, 0, 0});
 
                 for ( const auto& particle : game.mParticles ) {
                     fill( particle.mX, particle.mY, 40, 40, { 255, particle.mShade, particle.mShade, particle.mShade } );

@@ -110,7 +110,7 @@ namespace odb {
 
 
       rect = SDL_Rect{ 480, 0, 40, 40 };
-      rect.y = game.timeEllapsed / ( 10000 / 480 );
+      rect.y = game.timeEllapsed / ( 15000 / 480 );
       rect.h = 480 - rect.y;
       SDL_FillRect( video, &rect, SDL_MapRGB( video->format, 128, 0, 0 ) );
       

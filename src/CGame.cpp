@@ -55,7 +55,7 @@ namespace odb {
         timeEllapsed += ms;
         ++frame;
 
-        if (timeEllapsed >= 10000) {
+        if (timeEllapsed >= 15000) {
             gameState = EGameState::kGameOver;
             init();
         }
